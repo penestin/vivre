@@ -1,162 +1,193 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-  <title>vivrePenestin.fr</title>
-  <link rel="icon" type="image/png" href="favicon-vivrepenestin.png">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Portail Vivre Pénestin</title>
+    <title>VivrePénestin.fr</title>
 
-<style>
-/* =====================================================
-   GENERAL
-   ===================================================== */
+    <link rel="icon" type="image/png" href="favicon-vivrepenestin.png">
 
-* {
-    box-sizing: border-box;
-}
+    <style>
+        /* =====================================================
+           GENERAL
+        ===================================================== */
 
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f3f3f3;
-    color: #205ba4;
-}
+        * {
+            box-sizing: border-box;
+        }
 
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f3f3f3;
+            color: #205ba4;
+        }
 
-/* =====================================================
-   EN-TETE
-   ===================================================== */
+        /* =====================================================
+           EN-TETE
+        ===================================================== */
 
-header {
-    background: #205ba4;
-    color: white;
-    padding: 18px 30px;
-}
+        header {
+            background: #205ba4;
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+        }
 
-header h1 {
-    margin: 0;
-    font-size: 24px;
-}
+        .logo {
+            width: 220px; /* Modifier ici la taille du logo */
+            max-width: 90%;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+        }
 
-header p {
-    margin: 6px 0 0;
-    color: #ddd;
-}
+        .intro {
+            max-width: 1100px;
+            margin: auto;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: white;
+        }
 
+        /* =====================================================
+           CONTENEUR
+        ===================================================== */
 
+        .container {
+            max-width: 1100px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
 
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
 
-/* Zone des tuiles */
+        /* =====================================================
+           TUILES
+        ===================================================== */
 
-.container{
-    max-width:1400px;
-    margin:40px auto;
-    padding:0 20px;
-}
+        .tile {
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            min-height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,.15);
+            transition: all 0.3s ease;
+        }
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-}
+        .tile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 24px rgba(0,0,0,.20);
+        }
 
-/* Tuile */
+        .tile img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            display: block;
+        }
 
-.tile{
-    background:white;
-    border-radius:18px;
-    padding:25px;
-    box-shadow:0 5px 18px rgba(0,0,0,0.15);
-    transition:all .3s ease;
-    text-decoration:none;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:260px;
-}
+        /* =====================================================
+           TABLETTE
+        ===================================================== */
 
-.tile:hover{
-    transform:translateY(-8px) scale(1.03);
-    box-shadow:0 15px 35px rgba(0,0,0,0.25);
-}
+        @media (max-width: 900px) {
 
-.tile img{
-    width:100%;
-    max-width:280px;
-    height:auto;
-    display:block;
-}
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
-/* Tablette */
+            .logo {
+                width: 180px;
+            }
+        }
 
-@media (max-width:900px){
+        /* =====================================================
+           SMARTPHONE
+        ===================================================== */
 
-.grid{
-    grid-template-columns:repeat(2,1fr);
-}
+        @media (max-width: 600px) {
 
-}
+            .grid {
+                grid-template-columns: 1fr;
+            }
 
-/* Smartphone */
+            .logo {
+                width: 150px;
+            }
 
-@media (max-width:600px){
+            .intro {
+                font-size: 0.95rem;
+            }
 
-.grid{
-    grid-template-columns:1fr;
-}
+            .tile {
+                min-height: 160px;
+            }
 
-header img{
-    max-width:220px;
-}
+            .tile img {
+                max-width: 170px;
+            }
+        }
 
-.tile{
-    min-height:220px;
-}
-
-}
-</style>
-    
+    </style>
 </head>
+
 <body>
 
-<header>
-    <img src="VP-500.png" alt="Logo principal">
-</header>
+    <header>
 
-<div class="container">
+        <img src="VP-500.png" alt="Logo Vivre Pénestin" class="logo">
 
-    <div class="grid">
+        <p class="intro">
+            Les Référents de secteur, le Conseil des Jeunes, le Conseil des Sages
+            et l'Inventaire Participatif du Patrimoine contribuent à renforcer le
+            dialogue avec les habitants, à valoriser les initiatives locales et à
+            préserver l'identité de notre commune.
+        </p>
 
-        <a href="https://referents.vivrepenestin.fr/" target="_blank" class="tile">
-            <img src="b.jpg" alt="Menu 1">
-        </a>
+    </header>
 
-        <a href="https://referents.vivrepenestin.fr/" target="_blank" class="tile">
-            <img src="d.jpg" alt="Menu 2">
-        </a>
+    <div class="container">
 
-        <a href="https://referents.vivrepenestin.fr/" target="_blank" class="tile">
-            <img src="c.jpg" alt="Menu 3">
-        </a>
+        <div class="grid">
 
-        <a href="https://referents.vivrepenestin.fr/" target="_blank" class="tile">
-            <img src="e.jpg" alt="Menu 4">
-        </a>
+            <a href="https://referents.vivrepenestin.fr/" target="_blank" class="tile">
+                <img src="b.jpg" alt="Référents de secteur">
+            </a>
 
-        <a href="https://referents.vivrepenestin.fr/" target="_blank" class="tile">
-            <img src="e.jpg" alt="Menu 5">
-        </a>
+            <a href="https://jeunes.vivrepenestin.fr/" target="_blank" class="tile">
+                <img src="d.jpg" alt="Conseil des Jeunes">
+            </a>
 
-        <a href="https://referents.vivrepenestin.fr/" target="_blank" class="tile">
-            <img src="e.jpg" alt="Menu 6">
-        </a>
+            <a href="https://sages.vivrepenestin.fr/" target="_blank" class="tile">
+                <img src="c.jpg" alt="Conseil des Sages">
+            </a>
+
+            <a href="https://patpen.vivrepenestin.fr/" target="_blank" class="tile">
+                <img src="e.jpg" alt="Inventaire du Patrimoine">
+            </a>
+
+            <a href="#" class="tile">
+                <img src="f.jpg" alt="Actualités">
+            </a>
+
+            <a href="#" class="tile">
+                <img src="g.jpg" alt="Contact">
+            </a>
+
+        </div>
 
     </div>
-
-</div>
 
 </body>
 </html>
