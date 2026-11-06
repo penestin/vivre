@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VivrePénestin.fr</title>
+
+<link rel="icon" type="image/png" href="favicon-vivrepenestin.png">
+
+<!-- Préchargement des photos -->
+<link rel="preload" as="image" href="csm__urbanisme_09c0f9f895.jpg">
+<link rel="preload" as="image" href="csm_La_Vilaine_b390939282.jpg">
+<link rel="preload" as="image" href="csm_patrimoine_paysage_008dfe6b67.jpg">
+<link rel="preload" as="image" href="csm_Penestin2020@alamoureux_MG_2042_a3f2eac84d.jpg">
+
+<style>
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f3f3f3;
+    color:#205ba4;
+}
+
+/* =====================================================
+   BANNIERE
+===================================================== */
+
+header{
+    position:relative;
+
+    min-height:320px;
+
+    background-image:url("csm_La_Vilaine_b390939282.jpg");
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+
+    overflow:hidden;
+}
+
+header::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.35);
+}
+
+.hero-overlay{
+    position:relative;
+    z-index:2;
+
+    min-height:320px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:25px;
+}
+
+.logo{
+    width:240px;
+    max-width:90%;
+    height:auto;
+
+    background:rgba(255,255,255,0.96);
+
+    border-radius:12px;
+
+    padding:10px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.30);
+}
+
+.intro{
+    max-width:1200px;
+
+    margin:auto;
+
+    font-size:1.6rem;
+
+    line-height:1.5;
+
+    color:white;
+
+    text-shadow:0 2px 10px rgba(0,0,0,.75);
+}
+
+/* =====================================================
+   CONTENEUR
+===================================================== */
+
+.container{
+    max-width:1100px;
+    margin:35px auto;
+    padding:0 20px;
+}
+
+/* =====================================================
+   GRILLE
+===================================================== */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+/* =====================================================
+   TUILES
+===================================================== */
+
+.tile{
+    background:white;
+
+    border-radius:15px;
+
+    padding:15px;
+
+    min-height:180px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-decoration:none;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+
+    transition:all .3s ease;
+}
+
+.tile:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 24px rgba(0,0,0,.20);
+}
+
+.tile img{
+    width:100%;
+    max-width:200px;
+    height:auto;
+    display:block;
+}
+
+/* =====================================================
+   TABLETTE
+===================================================== */
+
+@media (max-width:900px){
+
+    .grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .logo{
+        width:200px;
+    }
+
+    .intro{
+        font-size:1.25rem;
+    }
+}
+
+/* =====================================================
+   SMARTPHONE
+===================================================== */
+
+@media (max-width:600px){
+
+    header{
+        min-height:260px;
+        background-position:center center;
+    }
+
+    .hero-overlay{
+        min-height:260px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .logo{
+        width:140px;
+        margin-bottom:15px;
+    }
+
+    .intro{
+        font-size:1rem;
+        line-height:1.4;
+    }
+
+    .tile{
+        min-height:160px;
+    }
+
+    .tile img{
+        max-width:170px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header id="hero">
+
+    <div class="hero-overlay">
+
+        <img
+            src="VP-500.png"
+            alt="Logo Vivre Pénestin"
+            class="logo">
+
+        <p class="intro">
+            Les Référents de secteur, le Conseil des Jeunes,
+            le Conseil des Sages et l'Inventaire Participatif du Patrimoine
+            contribuent à renforcer le dialogue avec les habitants,
+            à valoriser les initiatives locales et à préserver
+            l'identité de notre commune.
+        </p>
+
+    </div>
+
+</header>
+
+<div class="container">
+
+    <div class="grid">
+
+        <a href="https://referents.vivrepenestin.fr/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="tile">
+            <img src="rs.png" alt="Référents de secteur">
+        </a>
+
+        <a href="https://jeunes.vivrepenestin.fr/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="tile">
+            <img src="cj.png" alt="Conseil des Jeunes">
+        </a>
+
+        <a href="https://sages.vivrepenestin.fr/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="tile">
+            <img src="cs.png" alt="Conseil des Sages">
+        </a>
+
+        <a href="https://patpen.vivrepenestin.fr/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="tile">
+            <img src="patpen.png" alt="Inventaire Participatif du Patrimoine">
+        </a>
+
+        <a href="#" class="tile">
+            <img src="CT.png" alt="Rubrique à venir">
+        </a>
+
+        <a href="#" class="tile">
+            <img src="CT.png" alt="Rubrique à venir">
+        </a>
+
+    </div>
+
+</div>
+
+<script>
+
+const photos = [
+    "csm__urbanisme_09c0f9f895.jpg",
+    "csm_La_Vilaine_b390939282.jpg",
+    "csm_patrimoine_paysage_008dfe6b67.jpg",
+    "csm_Penestin2020@alamoureux_MG_2042_a3f2eac84d.jpg"
+];
+
+const photoAleatoire =
+    photos[Math.floor(Math.random() * photos.length)];
+
+document.getElementById("hero").style.backgroundImage =
+'url("csm_La_Vilaine_b390939282.jpg")';
