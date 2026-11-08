@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>PATPEN</title>
+  <link rel="icon" type="image/png" href="favicon-patpen.png">
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PATPEN | Patrimoine & Mémoire de Pénestin</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#f5f7f8;
+color:#333;
+}
+
+header{
+background:#1f5e42;
+color:white;
+padding:20px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo img{
+width:70px;
+height:70px;
+object-fit:contain;
+}
+
+.logo-placeholder{
+width:70px;
+height:70px;
+background:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#1f5e42;
+font-weight:bold;
+}
+
+.titre h1{
+font-size:2rem;
+}
+
+.titre p{
+font-size:1rem;
+opacity:0.9;
+}
+
+.actions{
+display:flex;
+gap:15px;
+margin-top:10px;
+}
+
+.btn{
+padding:12px 22px;
+border:none;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn-consulter{
+background:#ffffff;
+color:#1f5e42;
+}
+
+.btn-consulter:hover{
+background:#e6e6e6;
+}
+
+.btn-contribuer{
+background:#f7b500;
+color:#000;
+}
+
+.btn-contribuer:hover{
+background:#ffcb3d;
+}
+
+.hero{
+padding:40px 20px;
+text-align:center;
+background:white;
+}
+
+.hero h2{
+font-size:2rem;
+margin-bottom:15px;
+}
+
+.hero p{
+max-width:900px;
+margin:auto;
+line-height:1.6;
+font-size:1.1rem;
+}
+
+.blocs{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+padding:40px;
+}
+
+.carte{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.carte h3{
+color:#1f5e42;
+margin-bottom:12px;
+}
+
+.categorie{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:15px;
+}
+
+.badge{
+background:#eaf6ef;
+color:#1f5e42;
+padding:8px 12px;
+border-radius:20px;
+font-size:0.9rem;
+}
+
+.section-map{
+padding:20px 40px 40px 40px;
+}
+.icone-carte{
+    width:20px;
+    height:20px;
+    object-fit:contain;
+    vertical-align:middle;
+}
+.titre-PATPEN,
+.titre-consulter,
+.titre-participer,
+.titre-categories{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+.map-container{
+width:100%;
+height:600px;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 2px 10px rgba(0,0,0,0.15);
+}
+
+iframe{
+width:100%;
+height:100%;
+border:none;
+}
+
+footer{
+background:#1f5e42;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:20px;
+}
+/* ===== AFFICHAGE SMARTPHONE ===== */
+@media (max-width: 400px){
+
+    /* Tuiles presque sur toute la largeur */
+    .blocs{
+        grid-template-columns:1fr;
+        gap:12px;
+        padding:6px 6px;
+    }
+
+    .carte{
+        width:100%;
+        padding:10px;
+        border-radius:10px;
+    }
+
+    /* Carte PATPEN avec les mêmes marges fines */
+    .section-map{
+        padding:10px 6px 10px 6px;
+    }
+
+    .map-container{
+        width:100%;
+        height:500px;
+        border-radius:10px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<div class="logo-placeholder">
+
+<h3 class="titre-PATPEN">
+    <img src="moule.svg"
+         alt="PATPEN"
+         class="icone-PATPEN">
+ 
+</div>
+
+<div class="titre">
+<h1>PATPEN</h1>
+<p>Patrimoine & Mémoire de Pénestin</p>
+</div>
+
+</div>
+
+<div class="actions">
+ 
+<dentification.html
+➕ Contribuer
+</a>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<h2>Découvrez le patrimoine de Pénestin</h2>
+
+<p>
+PATPEN permet de localiser, documenter et partager les éléments
+du patrimoine local : puits, fontaines, lavoirs, fours à pain,
+croix, moulins, maisons remarquables et autres témoins de la mémoire
+de la commune.
+</p>
+
+</section>
+
+<section class="blocs">
+
+<div class="carte">
+
+<h3 class="titre-consulter">
+    <img src="consulter.svg"
+         alt="consulter"
+         class="icone-consulter">
+    Consulter
+</h3>
+
+<p>
+Explorez les éléments patrimoniaux enregistrés sur la carte.
+Chaque fiche peut contenir :
+</p>
+
+<ul style="margin-top:10px;margin-left:20px;line-height:1.8;">
+<li>Photographies</li>
+<li>Localisation GPS</li>
+<li>Description</li>
+<li>Historique</li>
+<li>État de conservation</li>
+<li>Informations complémentaires</li>
+</ul>
+
+</div>
+
+<div class="carte">
+
+<h3 class="titre-participer">
+    <img src="participer.svg"
+         alt="participer"
+         class="icone-participer">
+    Participer
+</h3>
+
+<p>
+Vous connaissez un élément patrimonial non recensé ?
+Ajoutez une contribution après identification.
+</p>
+
+<br>
+
+identification.html
+Contribuer au projet
+</a>
+
+</div>
+
+<div class="carte">
+
+<h3 class="titre-categories">
+    <img src="categories.svg"
+         alt="categories"
+         class="icone-categories">
+    Categories
+</h3>
+
+<div class="categorie">
+
+<span class="badge">Puits</span>
+<span class="badge">Fontaine</span>
+<span class="badge">Lavoir</span>
+<span class="badge">Four à pain</span>
+<span class="badge">Croix</span>
+<span class="badge">Calvaire</span>
+<span class="badge">Moulin</span>
+<span class="badge">Maison remarquable</span>
+<span class="badge">Arbre remarquable</span>
+<span class="badge">Autres</span>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="carte" class="section-map">
+
+<h2 style="margin-bottom:20px;color:#1f5e42;">
+Carte du patrimoine
+</h2>
+
+<div class="map-container">
+
+<!-- Remplacer l'URL ci-dessous par votre carte PATPEN -->
+
+<iframe
+src="index.html"
+title="Carte PATPEN">
+</iframe>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+C-PATPEN-2026-
+
+<p style="margin-top:8px;font-size:0.9rem;">
+Projet participatif de valorisation du patrimoine local
+</p>
+
+</footer>
+
+</body>
+</html>
